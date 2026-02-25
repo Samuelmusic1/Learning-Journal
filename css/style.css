@@ -339,5 +339,9 @@ footer > p:last-of-type {
     .details {
         margin: 0 4em 1em 4em;
     }
+
+     #b6 {
+        margin-bottom: 2em;
+     }
  }
 
