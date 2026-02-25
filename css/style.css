@@ -220,7 +220,12 @@ footer > p:last-of-type {
  .blogs > .card:nth-child(n+4):nth-child(-n+6) {
     display: none;
  }
- 
+
+.card > a {
+    text-decoration: none;
+    color: inherit;
+}
+
  @media(min-width: 550px) {
     .blogs {
         display: grid;
