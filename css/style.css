@@ -1,0 +1,336 @@
+CSShtml, 
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Source Sans 3", sans-serif;
+}
+
+.gradCapLogo {
+    width: 50px;
+    max-width: 100px;
+    margin-right: 0.4em;
+}
+
+.title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0E0E0E;
+    font-family: "Roboto", sans-serif;
+    padding-top: 0.1em;
+}
+
+li {
+    list-style-type: none;
+    margin-left: 1em;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    
+}
+
+li > a {
+    text-decoration: none;
+    color: #0E0E0E;
+    font-weight: 500;
+    font-family: "Source Sans 3", sans-serif;
+    padding-right: 1em; 
+}
+
+.logo-title {
+    display: flex;
+}
+
+ul {
+    display: none;
+    /* border: 1px solid green; */
+    padding: 0;
+}
+
+ul.open {
+    display: flex;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    grid-area: head;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    margin-top: 1.2em;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.open {
+    display: none;
+}
+
+.intro {
+    background-image: url('/images/intropics.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffff;
+    padding: 5em 1.7em 0.5em 1em;
+}
+
+.date {
+    font-size: 0.7rem;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 0;
+}
+
+.introText, .blogOne {
+    font-size: 0.9rem;
+    margin-top: 0.5em;
+    font-weight: 300;
+ }
+ 
+ .cardImg {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    border-radius: 2px;
+    object-fit: cover;
+    height: 190px;
+ }
+ 
+ main {
+    display: grid;
+    grid-template-columns: 1.7em 1fr 1.7em;
+    grid-template-areas: 
+    "... head ..." 
+    "intro intro intro"
+    "... blog ..."
+    "... blog1 ..."
+    "link link link"
+    "... recPost ..."
+    "foot foot foot";
+ }
+ 
+ .intro {
+    grid-area: intro;
+ }
+ 
+ .blogs {
+    grid-area: blog;
+ }
+ 
+ .blogs1 {
+    grid-area: blog1;
+ }
+ 
+ h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 0;
+ }
+ 
+ .card-one > .date {
+    margin-bottom: 0.7em;
+ }
+ 
+ .card {
+    margin: 2.5em 0 3em 0;
+ }
+ 
+ .card:last-of-type {
+    margin-bottom: 0;
+ }
+ 
+footer > p {
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+}
+
+footer > p:last-of-type {
+    margin-top: 0.5em;
+    font-weight: 400;
+}
+
+.bloglink {
+    padding: 1.5em 0 3em 0;
+    text-align: center;
+    font-weight: 700;
+    color: #000000;
+    grid-area: link;
+}
+ 
+ footer {
+    grid-area: foot;
+    background-color: #202020;
+    color: #ffff;
+    text-align: center;
+    padding: 2em 5em;
+ }
+ 
+ h4 {
+    font-family: "Source Sans 3", sans-serif;
+ }
+ 
+ #post {
+    text-align: center;
+    padding: 0;
+    margin: 2.5em 0 0 0;
+ }
+ 
+ .recentPost {
+    grid-area: recPost;
+ }
+ 
+ #secondpart {
+    padding: 0;
+    margin: 0;
+ }
+ 
+ #footer2 {
+    margin-top: 2.5em;
+ }
+ 
+ .devImg {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    margin-bottom: 1.7em;
+ }
+ 
+ .details {
+    margin-top: 3em;
+    margin-bottom: -1em;
+ }
+ 
+ .blogs > .card:nth-child(n+4):nth-child(-n+6) {
+    display: none;
+ }
+ 
+ @media(min-width: 550px) {
+    .blogs {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1em;
+        margin-bottom: -2em; 
+        padding-bottom: 0; 
+    }
+    
+    .card-lg {
+        margin-bottom: -2em;
+        padding-bottom: 0;
+    }
+    
+    .cardImg {
+        height: 150px;
+    }
+    
+    .intro {
+        padding: 10em 12em 3em 2em;
+    }
+    
+    .hamburger {
+        display: none;
+    }
+    
+    ul {
+        display: flex;
+    }
+    
+    .blogs > .card:nth-child(n+4):nth-child(-n+6) {
+        display: grid;
+    }
+    
+    .card:nth-child(6) > .cardImg {
+        margin-bottom: -3em;
+    }
+    
+    .blogs-lg {
+        display: block;
+    }
+    
+    .blogs-lg > h2 {
+        margin: 0.7em 2em 0.8em 2.6em;
+        font-weight: 700;
+        font-size: 1.5em;
+    }
+    
+    .blogs-lg > .date {
+        margin-left: 6em;
+    }
+    
+    .blogs-lg > .introText {
+        margin: 0 5em 2.5em 4.5em;
+    }
+    
+    .blogs-lg > .cardImg {
+        height: 350px;
+        margin-bottom: 2.5em;
+    }
+    
+    .recentPost-lg {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1em;
+        align-items: start;
+    }
+    
+    .blogs1-lg {
+        padding: 0 4em 0 4em;
+    }
+    
+    
+    #footer2 {
+    margin-top: -2.5em;
+    }
+    
+    .devImg {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    margin-left: 1.5em;
+    }
+    
+    #abtpage {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .dev-intro {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2.5em;
+    }
+    
+    .dev-details {
+        width: 70%;
+    }
+    
+    .dev-details > h3 {
+        font-size: 1.5rem;
+    }
+    
+    .dev-details > p {
+        font-size: 1rem;
+        margin-top: 0.4em;
+    }
+    
+    .details {
+        margin: 0 4em 1em 4em;
+    }
+ }
+
