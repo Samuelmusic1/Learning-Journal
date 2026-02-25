@@ -110,6 +110,7 @@ h2 {
     border-radius: 2px;
     object-fit: cover;
     height: 190px;
+    border: 1px solid #000000;
  }
  
  main {
